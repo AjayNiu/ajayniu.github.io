@@ -87,7 +87,7 @@
 <meta property="og:description" content="编译较低版本的安卓源码需要配置的工具 gcc-4.4 g++-4.4 make 3.8 jdk1.6.0_45 其他安卓官网指定的配置项  安装低版本的的gcc/g++编辑器(以gcc-4.4为例) gcc当前版本可以通过gcc –version或者gcc -v查看。   首先安装一些依赖包 1sudo apt-get install build-essential  从archive.ubunt">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://img.blog.csdn.net/20160518122316046">
-<meta property="og:updated_time" content="2018-01-18T06:57:39.254Z">
+<meta property="og:updated_time" content="2018-01-19T03:11:03.995Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu编译安卓源码环境配置">
 <meta name="twitter:description" content="编译较低版本的安卓源码需要配置的工具 gcc-4.4 g++-4.4 make 3.8 jdk1.6.0_45 其他安卓官网指定的配置项  安装低版本的的gcc/g++编辑器(以gcc-4.4为例) gcc当前版本可以通过gcc –version或者gcc -v查看。   首先安装一些依赖包 1sudo apt-get install build-essential  从archive.ubunt">
@@ -347,8 +347,13 @@
 </li>
 <li><p>从<a href="archive.ubuntu.com/ubuntu/pool/universe/g/gcc-4.4">archive.ubuntu.com/ubuntu/pool/universe/g/gcc-4.4</a>分别下载下列.deb包进行安装，这里我用的是64位的Ubuntu所以下载如下文件。</p>
 </li>
+<li><p><a href="http://archive.ubuntu.com/ubuntu/pool/universe/g/gcc-4.4/cpp-4.4_4.4.7-8ubuntu1_amd64.deb" target="_blank" rel="noopener">cpp-4.4_4.4.7-8ubuntu1_amd64.deb</a></p>
+</li>
+<li><a href="http://archive.ubuntu.com/ubuntu/pool/universe/g/gcc-4.4/g++-4.4_4.4.7-8ubuntu1_amd64.deb" target="_blank" rel="noopener">g++-4.4_4.4.7-8ubuntu1_amd64.deb</a></li>
+<li><a href="http://archive.ubuntu.com/ubuntu/pool/universe/g/gcc-4.4/gcc-4.4_4.4.7-8ubuntu1_amd64.deb" target="_blank" rel="noopener">gcc-4.4_4.4.7-8ubuntu1_amd64.deb</a></li>
+<li><a href="http://archive.ubuntu.com/ubuntu/pool/universe/g/gcc-4.4/gcc-4.4-base_4.4.7-8ubuntu1_amd64.deb" target="_blank" rel="noopener">gcc-4.4-base_4.4.7-8ubuntu1_amd64.deb</a></li>
+<li><a href="http://archive.ubuntu.com/ubuntu/pool/universe/g/gcc-4.4/libstdc++6-4.4-dev_4.4.7-8ubuntu1_amd64.deb" target="_blank" rel="noopener">libstdc++6-4.4-dev_4.4.7-8ubuntu1_amd64.deb</a></li>
 </ul>
-<p><a href="http://archive.ubuntu.com/ubuntu/pool/universe/g/gcc-4.4/cpp-4.4_4.4.7-8ubuntu1_amd64.deb" target="_blank" rel="noopener">cpp-4.4_4.4.7-8ubuntu1_amd64.deb</a><br><a href="http://archive.ubuntu.com/ubuntu/pool/universe/g/gcc-4.4/g++-4.4_4.4.7-8ubuntu1_amd64.deb" target="_blank" rel="noopener">g++-4.4_4.4.7-8ubuntu1_amd64.deb</a><br><a href="http://archive.ubuntu.com/ubuntu/pool/universe/g/gcc-4.4/gcc-4.4_4.4.7-8ubuntu1_amd64.deb" target="_blank" rel="noopener">gcc-4.4_4.4.7-8ubuntu1_amd64.deb</a><br><a href="http://archive.ubuntu.com/ubuntu/pool/universe/g/gcc-4.4/gcc-4.4-base_4.4.7-8ubuntu1_amd64.deb" target="_blank" rel="noopener">gcc-4.4-base_4.4.7-8ubuntu1_amd64.deb</a><br><a href="http://archive.ubuntu.com/ubuntu/pool/universe/g/gcc-4.4/libstdc++6-4.4-dev_4.4.7-8ubuntu1_amd64.deb" target="_blank" rel="noopener">libstdc++6-4.4-dev_4.4.7-8ubuntu1_amd64.deb</a></p>
 <ul>
 <li><p>进入上面文件的下载目录，在终端输入如下命令，分别安装.deb包</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -i *.deb</span><br></pre></td></tr></table></figure>
@@ -360,15 +365,46 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update-alternatives --config gcc</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>显示如下，输入1即是自己需要的gcc-4.4版本：<br><img src="http://img.blog.csdn.net/20160518122316046" alt=""></p>
+<blockquote>
+<p>显示如下，输入1即是自己需要的gcc-4.4版本：</p>
+</blockquote>
+<p><img src="http://img.blog.csdn.net/20160518122316046" alt=""></p>
 <ul>
 <li>最后通过gcc –version或者gcc -v查看当前版本，g++安装同gcc。</li>
 </ul>
 <h2 id="安装低版本的make-3-8"><a href="#安装低版本的make-3-8" class="headerlink" title="安装低版本的make 3.8"></a>安装低版本的make 3.8</h2><ul>
-<li>xxx</li>
+<li>make-3.81.tar.bz2下载地址：<a href="http://ftp.gnu.org/gnu/make/" target="_blank" rel="noopener">http://ftp.gnu.org/gnu/make/</a></li>
+<li>进入到下载目录，然后根据下载的文件类型安装即可，具体安装操作请参考这里<a href="https://ajayniu.github.io/2018/01/19/Linux中如何安装.rpm，.tar，.tar.gz和tar.bz2文件/" target="_blank" rel="noopener">Linux中如何安装.rpm，.tar，.tar.gz和tar.bz2文件</a></li>
 </ul>
-<h2 id="安装低版本的jdk1-6-0-45"><a href="#安装低版本的jdk1-6-0-45" class="headerlink" title="安装低版本的jdk1.6.0_45"></a>安装低版本的jdk1.6.0_45</h2><ul>
-<li>xxx</li>
+<h2 id="安装低版本的jdk1-6-0-45-bin版本"><a href="#安装低版本的jdk1-6-0-45-bin版本" class="headerlink" title="安装低版本的jdk1.6.0_45(.bin版本)"></a>安装低版本的jdk1.6.0_45(.bin版本)</h2><ul>
+<li><p>下载文件文字假设为jdk-6u45-linux-x64.bin，修改其权限</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod +x jdk-6u45-linux-x64.bin</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>执行该文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./jdk-6u45-linux-x64.bin</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>执行完之后会在当前目录下生成一个文件夹，这里假设为jdk1.6.0_45，接着创建/usr/lib/jvm/目录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir /usr/lib/jvm</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>移动jdk1.6.0_45到/usr/lib/jvm/下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mv jdk1.6.0_45 /usr/lib/jvm</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>然后需要配置环境变量，通过vi或者gedit打开～/.bashrc文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gedit ~/.bashrc</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>或者</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vi ~/.bashrc</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在文件末尾追加如下内容<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/usr/local/java/jdk1.6.0_45  </span><br><span class="line">export JRE_HOME=$&#123;JAVA_HOME&#125;/jre  </span><br><span class="line">export CLASSPATH=.:$&#123;JAVA_HOME&#125;/lib:$&#123;JRE_HOME&#125;/lib </span><br><span class="line">export PATH=$&#123;JAVA_HOME&#125;/bin:$PATH</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="相关推荐"><a href="#相关推荐" class="headerlink" title="相关推荐"></a>相关推荐</h2><ul>
+<li><a href="https://www.jianshu.com/p/367f0886e62b" target="_blank" rel="noopener">自己动手编译Android源码</a></li>
+<li><a href="http://blog.csdn.net/qq_25697993/article/details/53262989" target="_blank" rel="noopener">Android 源码环境搭建及编译</a></li>
+<li><a href="http://blog.csdn.net/luoshengyang/article/details/18928789" target="_blank" rel="noopener">Android编译系统环境初始化过程分析</a></li>
 </ul>
 
       
@@ -589,7 +625,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#编译较低版本的安卓源码需要配置的工具"><span class="nav-number">1.</span> <span class="nav-text">编译较低版本的安卓源码需要配置的工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装低版本的的gcc-g-编辑器-以gcc-4-4为例"><span class="nav-number">2.</span> <span class="nav-text">安装低版本的的gcc/g++编辑器(以gcc-4.4为例)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装低版本的make-3-8"><span class="nav-number">3.</span> <span class="nav-text">安装低版本的make 3.8</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装低版本的jdk1-6-0-45"><span class="nav-number">4.</span> <span class="nav-text">安装低版本的jdk1.6.0_45</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#编译较低版本的安卓源码需要配置的工具"><span class="nav-number">1.</span> <span class="nav-text">编译较低版本的安卓源码需要配置的工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装低版本的的gcc-g-编辑器-以gcc-4-4为例"><span class="nav-number">2.</span> <span class="nav-text">安装低版本的的gcc/g++编辑器(以gcc-4.4为例)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装低版本的make-3-8"><span class="nav-number">3.</span> <span class="nav-text">安装低版本的make 3.8</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装低版本的jdk1-6-0-45-bin版本"><span class="nav-number">4.</span> <span class="nav-text">安装低版本的jdk1.6.0_45(.bin版本)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相关推荐"><span class="nav-number">5.</span> <span class="nav-text">相关推荐</span></a></li></ol></div>
             
 
           </div>
