@@ -2,6 +2,15 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
@@ -9,8 +18,11 @@
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
+
+
+
 
 
 
@@ -38,10 +50,6 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
 
 
 
@@ -50,45 +58,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.4.2" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.2">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.2">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.2">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT" />
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.2" color="#222">
 
 
 
 
 
 
-
-
-
-
-<meta name="description" content="No pains, no gains.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ajay&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Ajay&#39;s Blog">
-<meta property="og:description" content="No pains, no gains.">
-<meta property="og:locale" content="zh-CN">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ajay&#39;s Blog">
-<meta name="twitter:description" content="No pains, no gains.">
 
 
 
@@ -97,15 +85,13 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    version: '5.1.3',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
+    version: '6.4.2',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -117,14 +103,38 @@
 </script>
 
 
+  
+
+
+
+
+  <meta name="description" content="不劳无获.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AjayNiuniu的博客">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="AjayNiuniu的博客">
+<meta property="og:description" content="不劳无获.">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AjayNiuniu的博客">
+<meta name="twitter:description" content="不劳无获.">
+
+
+
+
+
 
   <link rel="canonical" href="http://yoursite.com/"/>
 
 
 
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
-
-  <title>Ajay's Blog</title>
+  <title>AjayNiuniu的博客</title>
   
 
 
@@ -133,6 +143,36 @@
 
 
 
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
 
 </head>
 
@@ -153,19 +193,17 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Ajay's Blog</span>
+        <span class="site-title">AjayNiuniu的博客</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-      
-        <p class="site-subtitle">An ape</p>
-      
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -173,65 +211,53 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home menu-item-active">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+  </li>
 
       
+      
     </ul>
+  
+
+  
+    
+
   
 
   
@@ -239,12 +265,20 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
@@ -257,6 +291,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -265,13 +301,13 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/28/安卓代码规范简要说明/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Ajay Niu">
-      <meta itemprop="description" content="">
+      <meta itemprop="name" content="AjayNiuniu">
+      <meta itemprop="description" content="不劳无获.">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ajay's Blog">
+      <meta itemprop="name" content="AjayNiuniu的博客">
     </span>
 
     
@@ -281,11 +317,21 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/02/28/安卓代码规范简要说明/" itemprop="url">安卓代码规范简要说明</a></h1>
+                <a class="post-title-link" href="/2018/02/28/安卓代码规范简要说明/" itemprop="url">
+                  安卓代码规范简要说明
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -293,13 +339,18 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-28T10:38:10+08:00">
-                2018-02-28
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2018-02-28 10:38:10 / 修改时间：11:58:58" itemprop="dateCreated datePublished" datetime="2018-02-28T10:38:10+08:00">2018-02-28</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -342,15 +393,20 @@ Fragment的布局文件命名为fragment_xxx
 自定义控件
           ...
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/02/28/安卓代码规范简要说明/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/02/28/安卓代码规范简要说明/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
           <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
@@ -389,6 +445,8 @@ Fragment的布局文件命名为fragment_xxx
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -397,13 +455,13 @@ Fragment的布局文件命名为fragment_xxx
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/24/OpenGLES3.x基础知识一/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Ajay Niu">
-      <meta itemprop="description" content="">
+      <meta itemprop="name" content="AjayNiuniu">
+      <meta itemprop="description" content="不劳无获.">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ajay's Blog">
+      <meta itemprop="name" content="AjayNiuniu的博客">
     </span>
 
     
@@ -413,11 +471,21 @@ Fragment的布局文件命名为fragment_xxx
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/02/24/OpenGLES3.x基础知识一/" itemprop="url">OpenGLES3.x基础知识一</a></h1>
+                <a class="post-title-link" href="/2018/02/24/OpenGLES3.x基础知识一/" itemprop="url">
+                  OpenGLES3.x基础知识一
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -425,11 +493,12 @@ Fragment的布局文件命名为fragment_xxx
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-24T09:16:44+08:00">
-                2018-02-24
-              </time>
-            
 
+              
+                
+              
+
+              <time title="创建时间：2018-02-24 09:16:44" itemprop="dateCreated datePublished" datetime="2018-02-24T09:16:44+08:00">2018-02-24</time>
             
 
             
@@ -471,15 +540,20 @@ Opengles3.0要求安卓的版本必须大于等于4.3，Opengles3.1要求安卓�
 Opengles3.x的跨平台性指的是着色器部分的代码在各个平台是通用的，其
           ...
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/02/24/OpenGLES3.x基础知识一/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/02/24/OpenGLES3.x基础知识一/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
           <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
@@ -518,6 +592,8 @@ Opengles3.x的跨平台性指的是着色器部分的代码在各个平台是通
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -526,13 +602,13 @@ Opengles3.x的跨平台性指的是着色器部分的代码在各个平台是通
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/09/Gradle使用技巧/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Ajay Niu">
-      <meta itemprop="description" content="">
+      <meta itemprop="name" content="AjayNiuniu">
+      <meta itemprop="description" content="不劳无获.">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ajay's Blog">
+      <meta itemprop="name" content="AjayNiuniu的博客">
     </span>
 
     
@@ -542,11 +618,21 @@ Opengles3.x的跨平台性指的是着色器部分的代码在各个平台是通
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/02/09/Gradle使用技巧/" itemprop="url">Gradle使用技巧</a></h1>
+                <a class="post-title-link" href="/2018/02/09/Gradle使用技巧/" itemprop="url">
+                  Gradle使用技巧
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -554,13 +640,18 @@ Opengles3.x的跨平台性指的是着色器部分的代码在各个平台是通
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-09T09:52:32+08:00">
-                2018-02-09
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2018-02-09 09:52:32 / 修改时间：09:56:42" itemprop="dateCreated datePublished" datetime="2018-02-09T09:52:32+08:00">2018-02-09</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -600,15 +691,20 @@ AS开发安卓项目时我们有时候会需要某一个本地项目依赖另一
 12include
           ...
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/02/09/Gradle使用技巧/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/02/09/Gradle使用技巧/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
           <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
@@ -647,6 +743,8 @@ AS开发安卓项目时我们有时候会需要某一个本地项目依赖另一
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -655,13 +753,13 @@ AS开发安卓项目时我们有时候会需要某一个本地项目依赖另一
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/06/git简明教程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Ajay Niu">
-      <meta itemprop="description" content="">
+      <meta itemprop="name" content="AjayNiuniu">
+      <meta itemprop="description" content="不劳无获.">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ajay's Blog">
+      <meta itemprop="name" content="AjayNiuniu的博客">
     </span>
 
     
@@ -671,11 +769,21 @@ AS开发安卓项目时我们有时候会需要某一个本地项目依赖另一
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/02/06/git简明教程/" itemprop="url">git简明教程</a></h1>
+                <a class="post-title-link" href="/2018/02/06/git简明教程/" itemprop="url">
+                  git简明教程
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -683,13 +791,30 @@ AS开发安卓项目时我们有时候会需要某一个本地项目依赖另一
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-06T16:11:41+08:00">
-                2018-02-06
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2018-02-06 16:11:41" itemprop="dateCreated datePublished" datetime="2018-02-06T16:11:41+08:00">2018-02-06</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-02-27 11:46:09" itemprop="dateModified" datetime="2018-02-27T11:46:09+08:00">2018-02-27</time>
+              
             
           </span>
 
@@ -738,15 +863,20 @@ git clone
 使用git clone从现有项目中拷贝项
           ...
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/02/06/git简明教程/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/02/06/git简明教程/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
           <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
@@ -785,6 +915,8 @@ git clone
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -793,13 +925,13 @@ git clone
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/19/Linux中如何安装.rpm，.tar，.tar.gz和tar.bz2文件/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Ajay Niu">
-      <meta itemprop="description" content="">
+      <meta itemprop="name" content="AjayNiuniu">
+      <meta itemprop="description" content="不劳无获.">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ajay's Blog">
+      <meta itemprop="name" content="AjayNiuniu的博客">
     </span>
 
     
@@ -809,11 +941,21 @@ git clone
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/01/19/Linux中如何安装.rpm，.tar，.tar.gz和tar.bz2文件/" itemprop="url">Linux中如何安装.rpm，.tar，.tar.gz和tar.bz2文件</a></h1>
+                <a class="post-title-link" href="/2018/01/19/Linux中如何安装.rpm，.tar，.tar.gz和tar.bz2文件/" itemprop="url">
+                  Linux中如何安装.rpm，.tar，.tar.gz和tar.bz2文件
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -821,11 +963,12 @@ git clone
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-19T11:05:43+08:00">
-                2018-01-19
-              </time>
-            
 
+              
+                
+              
+
+              <time title="创建时间：2018-01-19 11:05:43" itemprop="dateCreated datePublished" datetime="2018-01-19T11:05:43+08:00">2018-01-19</time>
             
 
             
@@ -877,15 +1020,20 @@ git clone
 1t
           ...
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/01/19/Linux中如何安装.rpm，.tar，.tar.gz和tar.bz2文件/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/01/19/Linux中如何安装.rpm，.tar，.tar.gz和tar.bz2文件/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
           <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
@@ -924,6 +1072,8 @@ git clone
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -932,13 +1082,13 @@ git clone
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/18/Ubuntu编译安卓源码环境配置/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Ajay Niu">
-      <meta itemprop="description" content="">
+      <meta itemprop="name" content="AjayNiuniu">
+      <meta itemprop="description" content="不劳无获.">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ajay's Blog">
+      <meta itemprop="name" content="AjayNiuniu的博客">
     </span>
 
     
@@ -948,11 +1098,21 @@ git clone
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/01/18/Ubuntu编译安卓源码环境配置/" itemprop="url">Ubuntu编译安卓源码环境配置</a></h1>
+                <a class="post-title-link" href="/2018/01/18/Ubuntu编译安卓源码环境配置/" itemprop="url">
+                  Ubuntu编译安卓源码环境配置
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -960,13 +1120,30 @@ git clone
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-18T11:46:55+08:00">
-                2018-01-18
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2018-01-18 11:46:55" itemprop="dateCreated datePublished" datetime="2018-01-18T11:46:55+08:00">2018-01-18</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-01-19 17:07:56" itemprop="dateModified" datetime="2018-01-19T17:07:56+08:00">2018-01-19</time>
+              
             
           </span>
 
@@ -1015,15 +1192,20 @@ gcc当前版本可以通过gcc –version或者gcc -v查看。
 1su
           ...
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/01/18/Ubuntu编译安卓源码环境配置/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/01/18/Ubuntu编译安卓源码环境配置/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
           <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
@@ -1062,6 +1244,8 @@ gcc当前版本可以通过gcc –version或者gcc -v查看。
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -1070,13 +1254,13 @@ gcc当前版本可以通过gcc –version或者gcc -v查看。
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/25/Markdown简单使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Ajay Niu">
-      <meta itemprop="description" content="">
+      <meta itemprop="name" content="AjayNiuniu">
+      <meta itemprop="description" content="不劳无获.">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ajay's Blog">
+      <meta itemprop="name" content="AjayNiuniu的博客">
     </span>
 
     
@@ -1086,11 +1270,21 @@ gcc当前版本可以通过gcc –version或者gcc -v查看。
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/12/25/Markdown简单使用/" itemprop="url">Markdown简单使用</a></h1>
+                <a class="post-title-link" href="/2017/12/25/Markdown简单使用/" itemprop="url">
+                  Markdown简单使用
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1098,13 +1292,30 @@ gcc当前版本可以通过gcc –version或者gcc -v查看。
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-25T17:58:11+08:00">
-                2017-12-25
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2017-12-25 17:58:11" itemprop="dateCreated datePublished" datetime="2017-12-25T17:58:11+08:00">2017-12-25</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-01-18 11:33:19" itemprop="dateModified" datetime="2018-01-18T11:33:19+08:00">2018-01-18</time>
+              
             
           </span>
 
@@ -1145,15 +1356,20 @@ gcc当前版本可以通过gcc –version或者gcc -v查看。
 图片和链接插入图片和链接的语法很像，区别在于一个感叹号。1
           ...
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/12/25/Markdown简单使用/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2017/12/25/Markdown简单使用/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
           <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
@@ -1192,9 +1408,6 @@ gcc当前版本可以通过gcc –version或者gcc -v查看。
           </div>
           
 
-
-          
-
         </div>
         
           
@@ -1221,71 +1434,44 @@ gcc当前版本可以通过gcc –version或者gcc -v查看。
             
               <img class="site-author-image" itemprop="image"
                 src="/images/avatar.gif"
-                alt="Ajay Niu" />
+                alt="AjayNiuniu" />
             
-              <p class="site-author-name" itemprop="name">Ajay Niu</p>
-              <p class="site-description motion-element" itemprop="description">No pains, no gains.</p>
-          </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives/">
-              
-                  <span class="site-state-item-count">7</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
-
-            
-
-            
-
-          </nav>
-
-          
-
-          <div class="links-of-author motion-element">
-            
-              
-                <span class="links-of-author-item">
-                  <a href="https://github.com/AjayNiu" target="_blank" title="GitHub">
-                    
-                      <i class="fa fa-fw fa-github"></i>GitHub</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  <a href="mailto:ajayniuniu@gmail.com" target="_blank" title="E-Mail">
-                    
-                      <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                </span>
-              
-            
+              <p class="site-author-name" itemprop="name">AjayNiuniu</p>
+              <p class="site-description motion-element" itemprop="description">不劳无获.</p>
           </div>
 
           
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+            </nav>
+          
+
+          
+
           
 
           
           
-            <div class="links-of-blogroll motion-element links-of-blogroll-block">
-              <div class="links-of-blogroll-title">
-                <i class="fa  fa-fw fa-link"></i>
-                友情链接
-              </div>
-              <ul class="links-of-blogroll-list">
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://github.com/AjayNiu" title="AjayNiu" target="_blank">AjayNiu</a>
-                  </li>
-                
-              </ul>
-            </div>
+
+          
           
 
+          
+            
+          
           
 
         </div>
@@ -1305,17 +1491,21 @@ gcc当前版本可以通过gcc –version或者gcc -v查看。
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2017/12 &mdash; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+        <div class="copyright"> &copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Ajay Niu</span>
+  <span class="author" itemprop="copyrightHolder">AjayNiuniu</span>
+
+  
 
   
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.4.4</div>
 
 
 
@@ -1323,12 +1513,13 @@ gcc当前版本可以通过gcc –version或者gcc -v查看。
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.3</div>
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Mist</a> v6.4.2</div>
 
 
 
 
         
+
 
 
 
@@ -1348,7 +1539,10 @@ gcc当前版本可以通过gcc –version或者gcc -v查看。
     
 
     
+	
+    
 
+    
   </div>
 
   
@@ -1367,10 +1561,12 @@ gcc当前版本可以通过gcc –version或者gcc -v查看。
 
 
 
-  
 
 
-  
+
+
+
+
 
 
 
@@ -1389,16 +1585,6 @@ gcc当前版本可以通过gcc –version或者gcc -v查看。
 
   
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
     <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
@@ -1407,23 +1593,13 @@ gcc当前版本可以通过gcc –version或者gcc -v查看。
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
-  
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.2"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.2"></script>
 
 
 
@@ -1435,21 +1611,7 @@ gcc当前版本可以通过gcc –version或者gcc -v查看。
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.2"></script>
 
 
 
@@ -1457,11 +1619,7 @@ gcc当前版本可以通过gcc –version或者gcc -v查看。
 
 
 
-
-
   
-
-
 
 
 
@@ -1485,6 +1643,14 @@ gcc当前版本可以通过gcc –version或者gcc -v查看。
   
 
   
+
+  
+
+  
+  
+
+  
+
   
 
   
