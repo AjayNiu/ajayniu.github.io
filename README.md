@@ -1,7 +1,7 @@
-# PengjieNiu's Blog
+# Jacob Niu's Blog
 
 personal blog.
 
 ## Getting Started
 
-- Blog address is [here](https://pengjieniu.github.io).
+- Blog address is [here](https://jacobniu.github.io).
